@@ -27,7 +27,7 @@ export default function TopNav() {
   return (
     <>
       <SideNav menuVisibility={showNav} onCloseNav={handleCloseNav} />
-      <nav className="bg-gray-100 p-3 pb-1 lg:px-6 w-full rounded-lg">
+      <nav className="bg-gray-100 p-3 pb-1 lg:px-6 w-full">
         <div className="w-full flex justify-between items-center">
           <div className="flex justify-start items-center gap-2">
             <a href="#">
