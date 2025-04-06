@@ -9,6 +9,7 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import SideNavItem from "./SideNavItem";
+import Image from "next/image";
 
 export default function SideNav({
   menuVisibility,
@@ -43,8 +44,8 @@ export default function SideNav({
         >
           <FontAwesomeIcon icon={faXmark} />
         </button>
-        <img
-          src={logo.src}
+        <Image
+          src={logo}
           alt="site logo"
           className="absolute left-2 top-8 w-3/4 h-auto"
         />
