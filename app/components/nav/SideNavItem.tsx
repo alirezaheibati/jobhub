@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import Link from "next/link";
 
 type SideNavItemProps = {
   title: string;
@@ -13,7 +14,7 @@ export default function SideNavItem({ icon, title, linkTo }: SideNavItemProps) {
       className={`mb-4 text-xl hover:opacity-90 flex justify-start items-center gap-4 text-slate-50`}
     >
       <FontAwesomeIcon icon={icon} className="text-base" />
-      <a href={linkTo}>{title}</a>
+      <Link href={linkTo}>{title}</Link>
     </li>
   );
 }
