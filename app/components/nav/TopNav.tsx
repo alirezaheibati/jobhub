@@ -14,6 +14,7 @@ import NavSearchBox from "./NavSearchBox";
 import TopNavItem from "./TopNavItem";
 import { useState } from "react";
 import SideNav from "./SideNav";
+import Link from "next/link";
 
 export default function TopNav() {
   const [showNav, setShowNav] = useState(false);
@@ -30,9 +31,9 @@ export default function TopNav() {
       <nav className="bg-gray-100 p-3 pb-1 lg:px-6 w-full">
         <div className="w-full flex justify-between items-center">
           <div className="flex justify-start items-center gap-2">
-            <a href="#">
+            <Link href="#">
               <img src={logo.src} alt="site logo" className="h-12" />
-            </a>
+            </Link>
             <NavSearchBox />
           </div>
           <div className="flex justify-start items-center gap-2 lg:gap-4 flex-row-reverse md:flex-row">
