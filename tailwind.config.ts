@@ -6,6 +6,17 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    "-translate-x-[0vw]",
+    "-translate-x-[100vw]",
+    "-translate-x-[200vw]",
+    "-translate-x-[300vw]",
+    "-translate-x-[400vw]",
+    "md:-translate-x-[33vw]",
+    "md:-translate-x-[66vw]",
+    "md:-translate-x-[99vw]",
+    "md:-translate-x-[132vw]",
+  ],
   theme: {
     extend: {
       colors: {
