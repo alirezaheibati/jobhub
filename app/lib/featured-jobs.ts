@@ -1,5 +1,4 @@
-import sql from "better-sqlite3";
-const db = sql("job.db");
+import { db } from "@/initdb";
 import FeaturedJobInterface from "../interface/FeaturedJobInterface";
 
 export function getAllFeaturedJobs(): FeaturedJobInterface[] {
