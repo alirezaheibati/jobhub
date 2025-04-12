@@ -1,6 +1,4 @@
-import sql from "better-sqlite3";
-const db = sql("job.db");
-
+import { db } from "@/initdb";
 import ReviewInterface from "../interface/ReviewInterface";
 
 export function getAllReviews(): ReviewInterface[] {
