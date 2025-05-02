@@ -15,6 +15,7 @@ import TopNavItem from "./TopNavItem";
 import { useState } from "react";
 import SideNav from "./SideNav";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function TopNav() {
   const [showNav, setShowNav] = useState(false);
@@ -32,7 +33,12 @@ export default function TopNav() {
         <div className="w-full flex justify-between items-center">
           <div className="flex justify-start items-center gap-2">
             <Link href="#">
-              <img src={logo.src} alt="site logo" className="h-12" />
+              <Image
+                src={logo}
+                alt="site logo"
+                className="h-12 w-auto"
+                height={48}
+              />
             </Link>
             <NavSearchBox />
           </div>
