@@ -1,4 +1,3 @@
-import HeroBtn from "./HeroBtn";
 import HeroContent from "./HeroContent";
 import HeroImage from "./HeroImage";
 
