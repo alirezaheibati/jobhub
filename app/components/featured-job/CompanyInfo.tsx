@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
 interface CompanyInfoProps {
   company: string;
   logo: string;
@@ -12,9 +13,11 @@ export default function CompanyInfo({
 }: CompanyInfoProps) {
   return (
     <div className="flex justify-start items-center gap-2 my-6 ">
-      <img
+      <Image
         src={logo}
         alt={company}
+        width={40}
+        height={40}
         className="w-10 h-10 rounded-full border-2 p-2"
       />
       <div className="flex flex-col justify-start items-start">
