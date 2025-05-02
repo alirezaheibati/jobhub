@@ -1,4 +1,5 @@
 import ReviewInterface from "@/app/interface/ReviewInterface";
+import Image from "next/image";
 
 interface SingleReviewProps {
   activeStatus: boolean;
@@ -16,7 +17,13 @@ export default function SingleReview({
     >
       <div>
         <div className="h-12 w-12 rounded-full border-2 p-2">
-          <img src={review.logo} alt={review.occupation} className="w-full" />
+          <Image
+            src={review.logo}
+            alt={review.occupation}
+            className="w-full"
+            width={48}
+            height={48}
+          />
         </div>
         <p className={`my-3 line-clamp-4 `}>{review.review}</p>
       </div>
@@ -24,6 +31,8 @@ export default function SingleReview({
         <img
           src={review.avatar}
           alt={review.writer}
+          width={56}
+          height={56}
           className="h-14 w-14 rounded-full border-2"
         />
         <div className="flex flex-col justify-start items-start">
