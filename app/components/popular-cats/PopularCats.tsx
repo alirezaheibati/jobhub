@@ -1,5 +1,3 @@
-import { faArrowRight, faCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CategoryInfo from "./CategoryInfo";
 
 export default function PopularCats() {
