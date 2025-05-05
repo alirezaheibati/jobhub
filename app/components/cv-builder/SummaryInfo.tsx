@@ -1,3 +1,5 @@
+import SummaryItem from "./SummaryItem";
+
 interface SummaryInfoProps {
   name: string;
   degree: string;
@@ -15,22 +17,15 @@ export default function SummaryInfo({
   return (
     <div className="[&_span:first-of-type]:text-gray-500 [&_span:first-of-type]:text-sm [&_span:last-of-type]:font-semibold [&_span:last-of-type]:text-primary [&_p]:py-1">
       <h2 className="font-semibold text-2xl text-primary mb-4">{name}</h2>
-      <p>
-        <span>Job title: </span>
-        <span>{currentJob}</span>
-      </p>
-      <p>
-        <span>Employment status: </span>
-        <span>{employmentStatus}</span>
-      </p>
-      <p>
-        <span>Last Job: </span>
-        <span>{lastJob}</span>
-      </p>
-      <p>
-        <span>Last Degree: </span>
-        <span>{degree}</span>
-      </p>
+      <div className="flex justify-between items-center flex-wrap">
+        <SummaryItem title="Job title: " description={currentJob} />
+        <SummaryItem
+          title="Employment status: "
+          description={employmentStatus}
+        />
+        <SummaryItem title="Last Job: " description={lastJob} />
+        <SummaryItem title="Last Degree: " description={degree} />
+      </div>
     </div>
   );
 }
