@@ -37,7 +37,7 @@ export default function SummaryFrom() {
           onSubmit={handleSubmit}
           className="flex flex-wrap justify-start items-stretch"
         >
-          <div className="mb-2 w-1/2 px-2">
+          <div className="mb-2 w-full md:w-1/2 px-2">
             <label className="font-semibold block mb-1">Name:</label>
             <Field
               type="text"
@@ -50,7 +50,7 @@ export default function SummaryFrom() {
               className="text-sm text-red-700"
             />
           </div>
-          <div className="mb-2 w-1/2 px-2">
+          <div className="mb-2 w-full md:w-1/2 px-2">
             <label className="font-semibold block mb-1">Current Job:</label>
             <Field
               type="text"
@@ -64,7 +64,7 @@ export default function SummaryFrom() {
             />
           </div>
 
-          <div className="mb-2 w-1/2 px-2">
+          <div className="mb-2 w-full md:w-1/2 px-2">
             <label className="font-semibold block mb-1">Last Job:</label>
             <Field
               type="text"
@@ -78,7 +78,7 @@ export default function SummaryFrom() {
             />
           </div>
 
-          <div className="mb-2 w-1/2 px-2">
+          <div className="mb-2 w-full md:w-1/2 px-2">
             <label className="font-semibold block mb-1">Last Degree:</label>
             <Field
               type="text"
@@ -95,7 +95,7 @@ export default function SummaryFrom() {
             <label className="font-semibold block mb-1">
               Employment Status:
             </label>
-            <ul className="flex justify-start items-center gap-4 py-2">
+            <ul className="flex justify-start items-start gap-2 md:gap-4 py-2 flex-col md:flex-row">
               {employmentOptions.map((option) => (
                 <li key={option} className="cursor-pointer">
                   <Field
@@ -116,7 +116,7 @@ export default function SummaryFrom() {
               className="text-sm text-red-700"
             />
           </div>
-          <div className="flex gap-4 justify-start items-center">
+          <div className="flex gap-2 md:gap-4 justify-start items-center flex-wrap">
             <button
               type="submit"
               className="bg-primary h-10 w-32 rounded-lg text-slate-50"
