@@ -7,11 +7,23 @@ import { useState } from "react";
 
 export default function Summary({}) {
   const [editMode, setEditMode] = useState(false);
+
+  function editModeActivateHandler() {
+    setEditMode(true);
+  }
+  function editModeDeactiveHandler() {
+    setEditMode(false);
+  }
   return (
     <>
-      <CvBox icon={faUserTie} title="User Overview">
+      <CvBox
+        icon={faUserTie}
+        title="User Overview"
+        editMode={!editMode}
+        onActiveEditMode={editModeActivateHandler}
+      >
         {editMode ? (
-          <SummaryFrom />
+          <SummaryFrom onDeactiveEditMode={editModeDeactiveHandler} />
         ) : (
           <SummaryInfo
             name="Alireza Heibati"
