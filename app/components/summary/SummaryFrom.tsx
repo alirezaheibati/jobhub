@@ -19,7 +19,11 @@ const validationSchema = Yup.object({
   lastDegree: Yup.string().required("Last degree is required"),
   employmentStatus: Yup.string().required("Select employment status"),
 });
-export default function SummaryFrom() {
+
+interface SummaryFromProps {
+  onDeactiveEditMode: () => void;
+}
+export default function SummaryFrom({ onDeactiveEditMode }: SummaryFromProps) {
   return (
     <Formik<FormValues>
       initialValues={{
@@ -124,6 +128,7 @@ export default function SummaryFrom() {
               Save
             </button>
             <button
+              onClick={onDeactiveEditMode}
               type="button"
               className="bg-red-400 h-10 w-32 rounded-lg text-slate-50"
             >
