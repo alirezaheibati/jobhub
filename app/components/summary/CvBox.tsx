@@ -17,7 +17,11 @@ export default function CvBox({
   onActiveEditMode,
 }: CvBoxProps) {
   return (
-    <section className=" border border-primary border-l-8 pb-8 px-2 pt-24 md:px-8 relative rounded-lg group shadow-lg mb-6 last:mb-0 overflow-hidden">
+    <section
+      className={`border border-primary border-l-8 pb-8 px-2 ${
+        editMode ? "pt-24" : "pt-16"
+      } md:px-8 relative rounded-lg group shadow-lg mb-6 last:mb-0 overflow-hidden`}
+    >
       <div className="flex justify-start items-center gap-2 bg-slate-100 absolute left-0 top-0 right-0 pl-8 py-3">
         <FontAwesomeIcon icon={icon} />
         <h2 className="font-semibold">{title}</h2>
